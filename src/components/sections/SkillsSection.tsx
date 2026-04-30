@@ -11,14 +11,17 @@ export function SkillsSection() {
     >
       <div className="grid gap-4 sm:grid-cols-2">
         {skillGroups.map((group) => (
-          <article key={group.title} className="rounded-2xl bg-[var(--surface)] p-6">
+          <article
+            key={group.title}
+            className="rounded-[28px] border border-[var(--border)] bg-white p-6 shadow-[0_12px_36px_rgba(25,31,40,0.04)]"
+          >
             <h3 className="text-xl font-bold text-[var(--foreground)]">{group.title}</h3>
             <p className="mt-3 text-base leading-7 text-[var(--muted)]">{group.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-lg bg-white px-3 py-1 text-xs font-semibold text-[var(--muted)]"
+                  className="rounded-full bg-[var(--surface)] px-3 py-1 text-xs font-semibold text-[var(--muted)]"
                 >
                   {item}
                 </span>

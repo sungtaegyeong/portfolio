@@ -4,7 +4,7 @@ import { featuredProjects, otherProjects, type Project } from "@/data/projects";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-white p-6 transition-colors hover:border-[#c9d1d9]">
+    <article className="flex h-full flex-col rounded-[28px] border border-transparent bg-white p-6 shadow-[0_16px_48px_rgba(25,31,40,0.06)] transition-all duration-200 hover:-translate-y-1 hover:border-[#d8dee5] hover:shadow-[0_18px_54px_rgba(25,31,40,0.09)]">
       <div className="mb-5 flex items-start justify-between gap-4">
         <div>
           {project.featured && (
@@ -16,16 +16,16 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
       <p className="text-base leading-7 text-[var(--muted)]">{project.summary}</p>
-      <dl className="mt-6 space-y-4">
-        <div>
+      <dl className="mt-6 space-y-3">
+        <div className="rounded-2xl bg-[var(--surface)] p-4">
           <dt className="text-sm font-bold text-[var(--foreground)]">Problem</dt>
           <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.problem}</dd>
         </div>
-        <div>
+        <div className="rounded-2xl bg-[var(--surface)] p-4">
           <dt className="text-sm font-bold text-[var(--foreground)]">Solution</dt>
           <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.solution}</dd>
         </div>
-        <div>
+        <div className="rounded-2xl bg-[var(--surface)] p-4">
           <dt className="text-sm font-bold text-[var(--foreground)]">UX Point</dt>
           <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.uxPoint}</dd>
         </div>
@@ -34,7 +34,7 @@ function ProjectCard({ project }: { project: Project }) {
         {project.techStack.map((tech) => (
           <span
             key={tech}
-            className="rounded-lg bg-[var(--surface)] px-3 py-1 text-xs font-semibold text-[var(--muted)]"
+            className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]"
           >
             {tech}
           </span>
@@ -56,10 +56,12 @@ export function ProjectsSection() {
       title="화면의 문제를 구조와 흐름으로 해결한 프로젝트"
       description="대표 프로젝트 3개는 문제, 해결, UX 판단을 같은 기준으로 비교할 수 있게 정리합니다."
     >
-      <div className="grid gap-5 lg:grid-cols-3">
+      <div className="rounded-[32px] bg-[var(--surface)] p-3 sm:p-4">
+        <div className="grid gap-4 lg:grid-cols-3">
         {featuredProjects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
+        </div>
       </div>
       {otherProjects.length > 0 && (
         <div className="mt-14">

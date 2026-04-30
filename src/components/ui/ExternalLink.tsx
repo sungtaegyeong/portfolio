@@ -7,7 +7,7 @@ type ExternalLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 export function ExternalLink({ className = "", children, ...props }: ExternalLinkProps) {
   return (
     <a
-      className={`text-sm font-semibold text-[var(--muted)] transition-colors hover:text-[var(--foreground)] ${className}`}
+      className={`text-sm font-semibold text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)] ${className}`}
       target={props.href?.startsWith("http") ? "_blank" : props.target}
       rel={props.href?.startsWith("http") ? "noreferrer" : props.rel}
       {...props}
