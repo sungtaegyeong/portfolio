@@ -16,7 +16,7 @@ export const skillGroups = [
   },
   {
     title: "Styling",
-    description: "Tailwind CSS와 CSS를 활용해 일관된 디자인 규칙을 화면에 반영합니다.",
-    items: ["Tailwind CSS", "CSS", "Design Tokens"],
+    description: "Tailwind CSS와 Panda CSS를 활용해 일관된 디자인 규칙을 화면에 반영합니다.",
+    items: ["Tailwind CSS", "Panda CSS", "CSS", "Design Tokens"],
   },
 ] as const;
