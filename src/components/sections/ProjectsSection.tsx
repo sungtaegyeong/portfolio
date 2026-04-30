@@ -61,26 +61,28 @@ export function ProjectsSection() {
           <ProjectCard key={project.slug} project={project} />
         ))}
       </div>
-      <div className="mt-14">
-        <h3 className="text-xl font-bold text-[var(--foreground)]">Other Projects</h3>
-        <div className="mt-5 grid gap-3">
-          {otherProjects.map((project) => (
-            <article
-              key={project.slug}
-              className="flex flex-col gap-3 rounded-2xl bg-[var(--surface)] p-5 sm:flex-row sm:items-center sm:justify-between"
-            >
-              <div>
-                <h4 className="font-bold text-[var(--foreground)]">{project.title}</h4>
-                <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.summary}</p>
-              </div>
-              <div className="flex shrink-0 gap-4">
-                {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
-                {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
-              </div>
-            </article>
-          ))}
+      {otherProjects.length > 0 && (
+        <div className="mt-14">
+          <h3 className="text-xl font-bold text-[var(--foreground)]">Other Projects</h3>
+          <div className="mt-5 grid gap-3">
+            {otherProjects.map((project) => (
+              <article
+                key={project.slug}
+                className="flex flex-col gap-3 rounded-2xl bg-[var(--surface)] p-5 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div>
+                  <h4 className="font-bold text-[var(--foreground)]">{project.title}</h4>
+                  <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.summary}</p>
+                </div>
+                <div className="flex shrink-0 gap-4">
+                  {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
+                  {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </Section>
   );
 }
