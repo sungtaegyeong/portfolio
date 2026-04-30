@@ -7,7 +7,7 @@ export const skillGroups = [
   {
     title: "UI/UX",
     description: "사용자 흐름, 반응형 레이아웃, 접근성을 고려해 화면을 설계합니다.",
-    items: ["Responsive UI", "Accessibility", "Interaction"],
+    items: ["Responsive Layout", "User Flow", "Accessibility", "Interaction Design"],
   },
   {
     title: "State & Data",
