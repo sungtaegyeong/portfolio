@@ -59,9 +59,10 @@ Section order:
 1. Hero
 2. Featured Projects
 3. Skills
-4. About
-5. Other Projects
-6. Contact
+4. Experience
+5. About
+6. Other Projects
+7. Contact
 
 ## Hero
 
@@ -132,6 +133,15 @@ Suggested groups:
 - Styling: Tailwind CSS and component-level styling
 
 Avoid a long icon-only skill wall.
+
+## Experience
+
+Experience should support, not replace, the project section. Keep it compact and focus on collaboration, leadership, and frontend-related team work.
+
+Items:
+
+- UMC / President: project coordination, team communication, and completion support.
+- KUSITMS / Frontend Part: frontend implementation through product planning and team collaboration.
 
 ## About
 
