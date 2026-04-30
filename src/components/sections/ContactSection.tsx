@@ -19,6 +19,7 @@ export function ContactSection() {
         </div>
         <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3">
           <ExternalLink href={profile.github}>GitHub</ExternalLink>
+          <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
           <ExternalLink href={profile.velog}>Velog</ExternalLink>
         </div>
       </div>
