@@ -11,8 +11,8 @@ export const skillGroups = [
   },
   {
     title: "State & Data",
-    description: "상태와 API 데이터를 화면 흐름에 맞게 정리하고 연결합니다.",
-    items: ["Client State", "API Data", "Form Flow"],
+    description: "서버 상태, 전역 상태, 폼 검증, API 요청을 화면 흐름에 맞게 연결합니다.",
+    items: ["TanStack Query", "Zustand", "React Hook Form", "Zod", "Axios"],
   },
   {
     title: "Styling",
