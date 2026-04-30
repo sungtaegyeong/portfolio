@@ -11,6 +11,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Preserve room for future `/projects/[slug]` detail pages without adding them in the first implementation.
 - Use the existing Next.js App Router project.
 - Avoid `next/font/google` for the first implementation because the current build environment cannot fetch Google Fonts reliably.
+- Keep the first version light-mode only. Do not add dark mode or system-theme switching unless explicitly requested later.
 
 Expected structure:
 

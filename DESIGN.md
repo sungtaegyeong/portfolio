@@ -48,6 +48,7 @@ Initial color direction:
 - Accent blue: `#3182f6`
 
 Use a clean sans-serif system font stack unless a local font is added later.
+The first version is light-mode only. Do not add dark mode or automatic system theme switching until the light portfolio is complete and reviewed.
 
 ## Information Architecture
 
