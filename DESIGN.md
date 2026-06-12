@@ -118,8 +118,6 @@ Each featured project card should include:
 - Live link
 - GitHub link
 
-The first card may receive a small `Featured` label, but card sizing should remain consistent.
-
 ## Other Projects
 
 Use compact cards or a simple list for remaining projects. These should support breadth without competing with featured projects.

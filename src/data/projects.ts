@@ -10,7 +10,6 @@ export type Project = {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
-  featured?: boolean;
 };
 
 export const featuredProjects: Project[] = [
@@ -28,7 +27,6 @@ export const featuredProjects: Project[] = [
     ],
     techStack: ["Next.js", "Panda CSS"],
     liveUrl: "https://checktask.kro.kr",
-    featured: true,
   },
   {
     slug: "yure",

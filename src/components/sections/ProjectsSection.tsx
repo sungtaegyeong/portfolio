@@ -20,11 +20,6 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-5 flex items-start justify-between gap-4">
           <div>
-            {project.featured && (
-              <p className="mb-3 inline-flex rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]">
-                Featured
-              </p>
-            )}
             <h3 className="text-2xl font-bold text-[var(--foreground)]">{project.title}</h3>
           </div>
         </div>
