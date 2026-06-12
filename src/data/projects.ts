@@ -56,6 +56,7 @@ export const featuredProjects: Project[] = [
       "여러 사용 시나리오를 고려해 핵심 행동으로 이어지는 화면 흐름을 정리했습니다.",
     ],
     techStack: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://www.kkium.com",
     githubUrl: "https://github.com/team-KKIUM/KKIUM-FE",
   },
 ];
