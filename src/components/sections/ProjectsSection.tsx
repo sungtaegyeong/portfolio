@@ -31,20 +31,14 @@ function ProjectCard({ project }: { project: Project }) {
 
         <p className="text-base leading-7 text-[var(--muted)]">{project.summary}</p>
 
-        <dl className="mt-6 space-y-3">
-          <div className="rounded-2xl bg-[var(--surface)] p-4">
-            <dt className="text-sm font-bold text-[var(--foreground)]">Problem</dt>
-            <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.problem}</dd>
-          </div>
-          <div className="rounded-2xl bg-[var(--surface)] p-4">
-            <dt className="text-sm font-bold text-[var(--foreground)]">Solution</dt>
-            <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.solution}</dd>
-          </div>
-          <div className="rounded-2xl bg-[var(--surface)] p-4">
-            <dt className="text-sm font-bold text-[var(--foreground)]">UX Point</dt>
-            <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.uxPoint}</dd>
-          </div>
-        </dl>
+        <ul className="mt-5 space-y-2">
+          {project.highlights.map((highlight) => (
+            <li key={highlight} className="flex gap-2 text-sm leading-6 text-[var(--muted)]">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
 
         <div className="mt-6 flex flex-wrap gap-2">
           {project.techStack.map((tech) => (
@@ -72,7 +66,7 @@ export function ProjectsSection() {
       id="projects"
       eyebrow="Featured Projects"
       title="화면의 문제를 구조와 흐름으로 해결한 프로젝트"
-      description="대표 프로젝트 3개는 문제, 해결, UX 판단을 같은 기준으로 비교할 수 있게 정리합니다."
+      description="대표 프로젝트 3개를 실제 화면과 핵심 작업 중심으로 빠르게 훑을 수 있게 정리했습니다."
     >
       <div className="rounded-[32px] bg-[var(--surface)] p-3 sm:p-4">
         <div className="grid gap-4 lg:grid-cols-3">

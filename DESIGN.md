@@ -113,9 +113,7 @@ Each featured project card should include:
 - Project screenshot
 - Project name
 - One-line summary
-- Problem
-- Solution
-- UX Point
+- Key work highlights
 - Tech Stack
 - Live link
 - GitHub link
