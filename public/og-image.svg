@@ -1,0 +1,48 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7FBFF"/>
+  <circle cx="1028" cy="118" r="180" fill="#E8F3FF"/>
+  <circle cx="114" cy="552" r="140" fill="#EEF7FF"/>
+
+  <rect x="72" y="66" width="1056" height="498" rx="48" fill="white"/>
+  <rect x="72.5" y="66.5" width="1055" height="497" rx="47.5" stroke="#E5E8EB"/>
+
+  <rect x="128" y="124" width="206" height="46" rx="23" fill="#E8F3FF"/>
+  <text x="231" y="154" text-anchor="middle" fill="#3182F6"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="20" font-weight="800">Frontend Portfolio</text>
+
+  <text x="128" y="260" fill="#191F28"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="72" font-weight="900">성태경 / Sung Taegyeong</text>
+
+  <text x="128" y="342" fill="#191F28"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="44" font-weight="800">복잡한 화면을 이해하기 쉬운 경험으로 만듭니다.</text>
+
+  <text x="128" y="410" fill="#6B7684"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="28" font-weight="600">Frontend Developer</text>
+
+  <g transform="translate(128 472)">
+    <rect width="126" height="42" rx="21" fill="#F2F4F6"/>
+    <text x="63" y="28" text-anchor="middle" fill="#6B7684"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+          font-size="18" font-weight="800">Projects</text>
+  </g>
+  <g transform="translate(270 472)">
+    <rect width="102" height="42" rx="21" fill="#F2F4F6"/>
+    <text x="51" y="28" text-anchor="middle" fill="#6B7684"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+          font-size="18" font-weight="800">Skills</text>
+  </g>
+  <g transform="translate(388 472)">
+    <rect width="148" height="42" rx="21" fill="#F2F4F6"/>
+    <text x="74" y="28" text-anchor="middle" fill="#6B7684"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+          font-size="18" font-weight="800">Experience</text>
+  </g>
+
+  <path d="M944 470C944 456.745 954.745 446 968 446H1032C1045.25 446 1056 456.745 1056 470V510C1056 523.255 1045.25 534 1032 534H968C954.745 534 944 523.255 944 510V470Z" fill="#3182F6"/>
+  <path d="M1000 472L1018 490L1000 508" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1018 490H982" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</svg>
