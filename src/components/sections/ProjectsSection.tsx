@@ -1,48 +1,66 @@
+import Image from "next/image";
+
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { Section } from "@/components/ui/Section";
 import { featuredProjects, otherProjects, type Project } from "@/data/projects";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex h-full flex-col rounded-[28px] border border-transparent bg-white p-6 shadow-[0_16px_48px_rgba(25,31,40,0.06)] transition-all duration-200 hover:-translate-y-1 hover:border-[#d8dee5] hover:shadow-[0_18px_54px_rgba(25,31,40,0.09)]">
-      <div className="mb-5 flex items-start justify-between gap-4">
-        <div>
-          {project.featured && (
-            <p className="mb-3 inline-flex rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]">
-              Featured
-            </p>
-          )}
-          <h3 className="text-2xl font-bold text-[var(--foreground)]">{project.title}</h3>
-        </div>
+    <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-transparent bg-white shadow-[0_16px_48px_rgba(25,31,40,0.06)] transition-all duration-200 hover:-translate-y-1 hover:border-[#d8dee5] hover:shadow-[0_18px_54px_rgba(25,31,40,0.09)]">
+      <div className="relative aspect-[1200/630] overflow-hidden bg-[var(--surface)]">
+        <Image
+          src={project.image.src}
+          alt={project.image.alt}
+          fill
+          sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover"
+        />
       </div>
-      <p className="text-base leading-7 text-[var(--muted)]">{project.summary}</p>
-      <dl className="mt-6 space-y-3">
-        <div className="rounded-2xl bg-[var(--surface)] p-4">
-          <dt className="text-sm font-bold text-[var(--foreground)]">Problem</dt>
-          <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.problem}</dd>
+
+      <div className="flex flex-1 flex-col p-6">
+        <div className="mb-5 flex items-start justify-between gap-4">
+          <div>
+            {project.featured && (
+              <p className="mb-3 inline-flex rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]">
+                Featured
+              </p>
+            )}
+            <h3 className="text-2xl font-bold text-[var(--foreground)]">{project.title}</h3>
+          </div>
         </div>
-        <div className="rounded-2xl bg-[var(--surface)] p-4">
-          <dt className="text-sm font-bold text-[var(--foreground)]">Solution</dt>
-          <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.solution}</dd>
+
+        <p className="text-base leading-7 text-[var(--muted)]">{project.summary}</p>
+
+        <dl className="mt-6 space-y-3">
+          <div className="rounded-2xl bg-[var(--surface)] p-4">
+            <dt className="text-sm font-bold text-[var(--foreground)]">Problem</dt>
+            <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.problem}</dd>
+          </div>
+          <div className="rounded-2xl bg-[var(--surface)] p-4">
+            <dt className="text-sm font-bold text-[var(--foreground)]">Solution</dt>
+            <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.solution}</dd>
+          </div>
+          <div className="rounded-2xl bg-[var(--surface)] p-4">
+            <dt className="text-sm font-bold text-[var(--foreground)]">UX Point</dt>
+            <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.uxPoint}</dd>
+          </div>
+        </dl>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {project.techStack.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
-        <div className="rounded-2xl bg-[var(--surface)] p-4">
-          <dt className="text-sm font-bold text-[var(--foreground)]">UX Point</dt>
-          <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.uxPoint}</dd>
+
+        <div className="mt-auto flex gap-4 pt-6">
+          {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
+          {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
         </div>
-      </dl>
-      <div className="mt-6 flex flex-wrap gap-2">
-        {project.techStack.map((tech) => (
-          <span
-            key={tech}
-            className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-      <div className="mt-auto flex gap-4 pt-6">
-        {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
-        {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
       </div>
     </article>
   );
@@ -58,9 +76,9 @@ export function ProjectsSection() {
     >
       <div className="rounded-[32px] bg-[var(--surface)] p-3 sm:p-4">
         <div className="grid gap-4 lg:grid-cols-3">
-        {featuredProjects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
         </div>
       </div>
       {otherProjects.length > 0 && (

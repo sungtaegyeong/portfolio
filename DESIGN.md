@@ -110,6 +110,7 @@ Use a card layout for three featured projects. Cards should have equal structure
 
 Each featured project card should include:
 
+- Project screenshot
 - Project name
 - One-line summary
 - Problem
