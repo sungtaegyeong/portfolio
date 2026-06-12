@@ -56,13 +56,24 @@ The first version is a one-page scrolling portfolio with room to add project det
 
 Section order:
 
-1. Hero
-2. Featured Projects
-3. Skills
-4. Experience
-5. About
-6. Other Projects
-7. Contact
+1. Header
+2. Hero
+3. Featured Projects
+4. Skills
+5. Experience
+6. About
+7. Other Projects
+8. Contact
+
+## Header
+
+Use a quiet sticky header for one-page navigation. It should improve scanning without competing with the hero.
+
+- Left: `Sung Taegyeong`
+- Desktop nav: Projects, Skills, Experience, Contact
+- Persistent CTA: Resume
+- Mobile: keep navigation minimal and always expose Resume
+- Visual style: white translucent background, subtle border, no heavy shadow
 
 ## Hero
 

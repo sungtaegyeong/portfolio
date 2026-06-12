@@ -1,0 +1,46 @@
+import { profile } from "@/data/profile";
+
+const navItems = [
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
+] as const;
+
+export function Header() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-[var(--border)]/70 bg-white/82 backdrop-blur-xl">
+      <nav
+        aria-label="Primary navigation"
+        className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8"
+      >
+        <a
+          href="#"
+          className="text-sm font-bold text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
+          aria-label="홈으로 이동"
+        >
+          Sung Taegyeong
+        </a>
+
+        <div className="hidden items-center gap-7 md:flex">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm font-semibold text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        <a
+          href={profile.resume}
+          className="inline-flex h-10 items-center justify-center rounded-2xl bg-[var(--accent)] px-4 text-sm font-bold text-white transition-colors hover:bg-[var(--accent-hover)]"
+        >
+          Resume
+        </a>
+      </nav>
+    </header>
+  );
+}
