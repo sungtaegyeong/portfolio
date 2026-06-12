@@ -12,7 +12,7 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
   return (
     <section id={id} className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
       {(eyebrow || title || description) && (
-        <div className="mb-8 max-w-3xl">
+        <div className="mb-8">
           {eyebrow && (
             <p className="mb-4 inline-flex rounded-full bg-[var(--accent-soft)] px-3 py-1 text-sm font-bold text-[var(--accent)]">
               {eyebrow}
