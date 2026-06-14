@@ -144,12 +144,22 @@ Avoid a long icon-only skill wall.
 
 ## Experience
 
-Experience should support, not replace, the project section. Keep it compact and focus on collaboration, leadership, and frontend-related team work.
+Experience should support, not replace, the project section. Use a minimal light-mode timeline when there are four or more meaningful items, so the section communicates growth and continuity without looking like another project grid.
 
-Items:
+Timeline rules:
 
-- UMC / President: project coordination, team communication, and completion support.
-- KUSITMS / Frontend Part: frontend implementation through product planning and team collaboration.
+- Use a thin vertical line and small accent dots.
+- Keep each item text-first, not card-based.
+- Show organization, role, period, and one or two concise bullets.
+- Keep accent blue as a small signal only.
+- Avoid heavy dark timeline styling, large cards, and long resume-like paragraphs.
+
+Initial items can be placeholders until final activity details are confirmed:
+
+- UMC 10기 / President
+- KUSITMS(한국대학생IT경영학회) 33기 / Frontend Part
+- UMC 9기 / Web Challenger
+- Techeer Bootcamp / Participant
 
 ## About
 
