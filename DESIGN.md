@@ -140,6 +140,8 @@ Suggested groups:
 - State & Data: 상태와 API 데이터를 화면 흐름에 맞게 정리
 - Styling: Tailwind CSS and component-level styling
 
+Skill keywords can use small accent-blue tags with a soft blue background. Keep titles and descriptions neutral so the tags remain scannable without making the whole section feel overly blue.
+
 Avoid a long icon-only skill wall.
 
 ## Experience

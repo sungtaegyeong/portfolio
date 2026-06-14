@@ -21,7 +21,7 @@ export function SkillsSection() {
               {group.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full bg-[var(--surface)] px-3 py-1 text-xs font-semibold text-[var(--muted)]"
+                  className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]"
                 >
                   {item}
                 </span>
