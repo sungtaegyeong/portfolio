@@ -7,7 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 ## Portfolio Implementation Notes
 
 - Follow `DESIGN.md` for visual direction, content tone, and section-level UI rules.
-- Keep the first version as a one-page scrolling portfolio with this order: Hero, Featured Projects, Skills, About, Other Projects, Contact.
+- Keep the first version as a one-page scrolling portfolio with this order: Header, Hero, Featured Projects, Skills, Experience, Contact.
 - Preserve room for future `/projects/[slug]` detail pages without adding them in the first implementation.
 - Use the existing Next.js App Router project.
 - Avoid `next/font/google` for the first implementation because the current build environment cannot fetch Google Fonts reliably.

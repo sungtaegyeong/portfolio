@@ -12,7 +12,6 @@ Examples:
 
 - Featured Projects
 - Skills
-- About
 - Contact
 - Resume
 - GitHub
@@ -61,9 +60,8 @@ Section order:
 3. Featured Projects
 4. Skills
 5. Experience
-6. About
-7. Other Projects
-8. Contact
+6. Other Projects
+7. Contact
 
 ## Header
 
@@ -162,16 +160,6 @@ Initial items can be placeholders until final activity details are confirmed:
 - KUSITMS(한국대학생IT경영학회) 33기 / Frontend Part
 - UMC 9기 / Web Challenger
 - Techeer Bootcamp / Participant
-
-## About
-
-About should be short and practical. It should explain how the developer thinks about UI and UX without becoming a long personal essay.
-
-Focus points:
-
-- Makes complex screens easier to understand.
-- Values clear user flow and readable interfaces.
-- Builds web app and dashboard interfaces with attention to detail.
 
 ## Contact
 
