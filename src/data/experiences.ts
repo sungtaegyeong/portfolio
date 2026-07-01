@@ -1,11 +1,11 @@
 export const experiences = [
   {
-    organization: "UMC 10기",
+    organization: "UMC(University MakeUs Challenge) 10기",
     role: "President",
     period: "2026.02 - 2026.08",
     bullets: [
-      "프로젝트 팀이 끝까지 완성할 수 있도록 일정, 역할, 커뮤니케이션을 조율했습니다.",
-      "스터디 운영과 팀별 진행 상황을 관리하며 협업 흐름을 개선했습니다.",
+      "학교 내 UMC 활동의 전반적인 운영을 맡았습니다.",
+      "참여 프로젝트들의 진행 상황을 확인하고 피드백을 담당했습니다.",
     ],
   },
   {
@@ -18,7 +18,7 @@ export const experiences = [
     ],
   },
   {
-    organization: "UMC 9기",
+    organization: "UMC(University MakeUs Challenge) 9기",
     role: "Web Challenger",
     period: "2025.09 - 2026.02",
     bullets: [
@@ -28,11 +28,11 @@ export const experiences = [
   },
   {
     organization: "Techeer Bootcamp",
-    role: "Participant",
+    role: "Frontend Developer",
     period: "2025.01 - 2025.02",
     bullets: [
-      "사용자 플로우를 기준으로 화면을 나누고 주요 페이지 UI를 구현했습니다.",
-      "반응형 레이아웃과 공통 컴포넌트를 정리해 팀 내 구현 속도를 높였습니다.",
+      "서비스 기획부터 프론트엔드 구현까지 프로젝트 전반의 흐름을 경험했습니다.",
+      "웹 서비스와 Chrome Extension의 프론트엔드 구현을 진행했습니다.",
     ],
   },
 ] as const;

@@ -156,9 +156,9 @@ Timeline rules:
 
 Initial items can be placeholders until final activity details are confirmed:
 
-- UMC 10기 / President
+- UMC(University MakeUs Challenge) 10기 / President
 - KUSITMS(한국대학생IT경영학회) 33기 / Frontend Part
-- UMC 9기 / Web Challenger
+- UMC(University MakeUs Challenge) 9기 / Web Challenger
 - Techeer Bootcamp / Participant
 
 ## Contact
