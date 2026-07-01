@@ -6,8 +6,8 @@ export function SkillsSection() {
     <Section
       id="skills"
       eyebrow="Skills"
-      title="기술 이름보다 할 수 있는 일로 보여줍니다"
-      description="아이콘 나열 대신 UI 구현, 사용자 흐름, 데이터 연결 관점으로 역량을 정리합니다."
+      title="프로젝트에 사용해온 기술 스택"
+      description="프론트엔드 구현, 상태 관리, 스타일링, 협업 도구를 중심으로 정리했습니다."
     >
       <div className="grid gap-4 sm:grid-cols-2">
         {skillGroups.map((group) => (
@@ -16,8 +16,7 @@ export function SkillsSection() {
             className="rounded-[28px] border border-[var(--border)] bg-white p-6 shadow-[0_12px_36px_rgba(25,31,40,0.04)]"
           >
             <h3 className="text-xl font-bold text-[var(--foreground)]">{group.title}</h3>
-            <p className="mt-3 text-base leading-7 text-[var(--muted)]">{group.description}</p>
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <span
                   key={item}
