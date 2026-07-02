@@ -43,7 +43,11 @@ export const featuredProjects: Project[] = [
       src: "/checktask.png",
       alt: "CHECKTASK 프로젝트 화면",
     },
-    highlights: ["홈 대시보드와 캘린더", "자체 로그인과 카카오 OAuth", "프론트엔드 구조 설계"],
+    highlights: [
+      "홈 대시보드와 캘린더",
+      "자체 로그인과 카카오 OAuth",
+      "프론트엔드 구조 설계",
+    ],
     techStack: ["Next.js", "TypeScript", "Panda CSS", "TanStack Query"],
     liveUrl: "https://checktask.kr",
     detail: {
@@ -54,22 +58,24 @@ export const featuredProjects: Project[] = [
       features: [
         {
           title: "캘린더 기반 과제 관리",
-          description: "과제와 세부 TASK의 마감일을 월간 캘린더에서 확인하고 관리할 수 있습니다.",
+          description:
+            "과제와 세부 TASK의 마감일을 월간 캘린더에서 확인하고 관리할 수 있습니다.",
         },
         {
           title: "개인/팀 과제 상세 관리",
-          description: "과제별 세부 TASK, 자료, 마감일, 완료 상태를 함께 관리할 수 있습니다.",
+          description:
+            "과제별 세부 TASK, 자료, 마감일, 완료 상태를 함께 관리할 수 있습니다.",
         },
         {
           title: "팀 협업 관리",
-          description: "초대 코드, 팀원, 담당자, 자료, 회의록, 커뮤니케이션 링크를 한곳에서 관리할 수 있습니다.",
+          description:
+            "초대 코드, 팀원, 담당자, 자료, 회의록, 커뮤니케이션 링크를 한곳에서 관리할 수 있습니다.",
         },
       ],
       facts: [
         { label: "Role", value: "Frontend Lead" },
         { label: "Team", value: "PM 1 · Design 1 · FE 2 · BE 5" },
         { label: "Period", value: "2025.12 - 진행중" },
-        { label: "Contribution", value: "대시보드 / 인증 / 구조 설계" },
       ],
       contributions: [
         {
@@ -85,9 +91,9 @@ export const featuredProjects: Project[] = [
           tags: ["dnd-kit", "Optimistic Update"],
         },
         {
-          title: "자체 로그인과 카카오 OAuth",
+          title: "로그인",
           description:
-            "자체 로그인과 카카오 OAuth 흐름을 구현하고, 발급된 accessToken을 Axios interceptor에서 관리해 토큰 만료 시 자동 갱신되도록 구성했습니다.",
+            "자체 로그인과 카카오 OAuth를 구현하고, 인증 상태에 따른 사용자 진입 흐름을 구성했습니다.",
           tags: ["Login", "Kakao OAuth", "JWT"],
         },
       ],
@@ -133,7 +139,8 @@ export const featuredProjects: Project[] = [
         },
         {
           title: "뉴스·매거진 콘텐츠",
-          description: "J-POP 관련 뉴스와 아티클을 리스트와 상세 페이지로 제공합니다.",
+          description:
+            "J-POP 관련 뉴스와 아티클을 리스트와 상세 페이지로 제공합니다.",
         },
         {
           title: "일정 캘린더와 커뮤니티",
@@ -145,7 +152,6 @@ export const featuredProjects: Project[] = [
         { label: "Role", value: "Frontend Developer" },
         { label: "Team", value: "FE 2" },
         { label: "Period", value: "2026.03 - 진행중" },
-        { label: "Contribution", value: "뉴스 / 캘린더 / 커뮤니티" },
       ],
       contributions: [
         {
@@ -158,13 +164,13 @@ export const featuredProjects: Project[] = [
           title: "J-POP 일정 캘린더",
           description:
             "발매, 공연, 이벤트 일정을 월간 캘린더에서 확인하고 날짜별 정보를 빠르게 탐색할 수 있도록 구현했습니다.",
-          tags: ["Calendar", "Schedule"],
+          tags: ["FullCalendar", "Schedule"],
         },
         {
           title: "커뮤니티 페이지",
           description:
             "게시글 목록과 상세 흐름을 구성하고, 최신순·인기순 정렬을 통해 커뮤니티 콘텐츠를 탐색할 수 있도록 구현했습니다.",
-          tags: ["Community", "List UI"],
+          tags: ["Tiptap", "Community"],
         },
       ],
       troubleshooting: {
@@ -176,7 +182,7 @@ export const featuredProjects: Project[] = [
           "정렬 변경 후에도 뒤로가기 흐름이 자연스러워졌고, 사용자가 이전 페이지로 한 번에 돌아갈 수 있도록 탐색 경험을 개선했습니다.",
       },
       learnings: [
-        "콘텐츠 서비스에서는 같은 컴포넌트를 반복하는 것보다 콘텐츠를 소비하는 방식에 맞춰 레이아웃을 다르게 가져가는 판단이 중요했습니다.",
+        "현직자의 코드 리뷰를 바탕으로 구현 방식의 근거를 점검하고, 유지보수성과 협업을 고려해 코드를 작성하는 기준을 배웠습니다.",
         "뉴스, 일정, 커뮤니티처럼 사용 목적이 다른 화면을 하나의 서비스 톤 안에서 정리하는 경험을 했습니다.",
       ],
     },
@@ -191,7 +197,7 @@ export const featuredProjects: Project[] = [
       alt: "KKIUM 프로젝트 화면",
     },
     highlights: ["공통 컴포넌트", "경험 추가·목록 화면", "모바일 랜딩 페이지"],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Storybook"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Jest"],
     liveUrl: "https://www.kkium.com",
     githubUrl: "https://github.com/team-KKIUM/KKIUM-FE",
     detail: {
@@ -220,14 +226,13 @@ export const featuredProjects: Project[] = [
         { label: "Role", value: "Frontend Developer" },
         { label: "Team", value: "PM 2 · Design 2 · FE 2 · BE 3" },
         { label: "Period", value: "2026.04 - 2026.06" },
-        { label: "Contribution", value: "공통 UI / 경험 관리 / 랜딩" },
       ],
       contributions: [
         {
           title: "공통 컴포넌트",
           description:
             "반복되는 버튼, 입력, 카드성 UI를 공통 컴포넌트로 정리해 화면 간 일관성을 유지할 수 있도록 구현했습니다.",
-          tags: ["Component", "Design System"],
+          tags: ["Storybook", "Component"],
         },
         {
           title: "경험 추가·목록 화면",
@@ -236,10 +241,10 @@ export const featuredProjects: Project[] = [
           tags: ["Experience", "Form"],
         },
         {
-          title: "모바일 랜딩 페이지",
+          title: "테스트 코드",
           description:
-            "모바일에서 서비스의 핵심 가치를 빠르게 이해할 수 있도록 메시지, CTA, 화면 흐름을 중심으로 랜딩 페이지를 구현했습니다.",
-          tags: ["Mobile", "Landing"],
+            "주요 사용자 흐름을 검증하기 위해 E2E 테스트를 작성하고, 기능 변경 후에도 핵심 플로우가 유지되는지 확인할 수 있도록 구성했습니다.",
+          tags: ["Playwright", "E2E"],
         },
       ],
       troubleshooting: {
@@ -252,7 +257,7 @@ export const featuredProjects: Project[] = [
       },
       learnings: [
         "AI 기능을 소개하는 서비스에서는 기술 설명보다 사용자가 어떤 입력을 하고 어떤 결과를 얻는지 먼저 보여주는 구성이 중요했습니다.",
-        "공통 컴포넌트는 예쁘게 분리하는 것보다 실제 화면에서 반복되는 사용 규칙을 안정적으로 담는 것이 중요하다는 점을 배웠습니다.",
+        "성능 최적화는 Lighthouse 점수뿐 아니라 초기 렌더링에 필요한 리소스와 사용자 액션 이후 필요한 리소스를 구분해 로딩 전략을 세우는 판단이 중요하다는 점을 배웠습니다.",
       ],
     },
   },

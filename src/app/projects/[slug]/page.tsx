@@ -179,7 +179,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </div>
             </DetailSection>
 
-            <DetailSection eyebrow="My Contribution" title="주요 기여">
+            <DetailSection eyebrow="Contribution" title="주요 기여">
               <div className="grid gap-4 md:grid-cols-3">
                 {project.detail.contributions.map((contribution) => (
                   <article
