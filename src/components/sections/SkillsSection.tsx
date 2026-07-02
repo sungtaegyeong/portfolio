@@ -13,14 +13,14 @@ export function SkillsSection() {
         {skillGroups.map((group) => (
           <article
             key={group.title}
-            className="rounded-[28px] border border-[var(--border)] bg-white p-6 shadow-[0_12px_36px_rgba(25,31,40,0.04)]"
+            className="rounded-[28px] border border-(--border) bg-white p-6 shadow-[0_12px_36px_rgba(25,31,40,0.04)]"
           >
-            <h3 className="text-xl font-bold text-[var(--foreground)]">{group.title}</h3>
+            <h3 className="text-xl font-bold text-(--foreground)">{group.title}</h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]"
+                  className="rounded-full bg-(--accent-soft) px-3 py-1 text-xs font-bold text-(--accent)"
                 >
                   {item}
                 </span>
