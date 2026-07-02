@@ -16,7 +16,7 @@ export function Header() {
       >
         <a
           href="#"
-          className="text-sm font-bold text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
+          className="text-base font-bold text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
           aria-label="홈으로 이동"
         >
           Sung Taegyeong
