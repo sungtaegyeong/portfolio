@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 import { profile } from "@/data/profile";
 
 const navItems = [
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export function Header() {
@@ -14,23 +16,23 @@ export function Header() {
         aria-label="Primary navigation"
         className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8"
       >
-        <a
-          href="#"
+        <Link
+          href="/"
           className="text-base font-bold text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
           aria-label="홈으로 이동"
         >
           Sung Taegyeong
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-sm font-semibold text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { Section } from "@/components/ui/Section";
@@ -46,7 +47,13 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <div className="mt-auto flex gap-4 pt-6">
+        <div className="mt-auto flex flex-wrap gap-4 pt-6">
+          <Link
+            href={`/projects/${project.slug}`}
+            className="text-sm font-bold text-[var(--accent)] transition-colors hover:text-[var(--accent-hover)]"
+          >
+            자세히 보기
+          </Link>
           {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
           {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
         </div>
@@ -84,6 +91,12 @@ export function ProjectsSection() {
                   <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{project.summary}</p>
                 </div>
                 <div className="flex shrink-0 gap-4">
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="text-sm font-bold text-[var(--accent)] transition-colors hover:text-[var(--accent-hover)]"
+                  >
+                    자세히 보기
+                  </Link>
                   {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
                   {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
                 </div>
