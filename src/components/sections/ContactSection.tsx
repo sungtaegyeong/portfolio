@@ -1,3 +1,7 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FiFileText, FiMail } from "react-icons/fi";
+import { SiVelog } from "react-icons/si";
+
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { Section } from "@/components/ui/Section";
@@ -12,15 +16,28 @@ export function ContactSection() {
           연락은 이메일로 부탁드립니다.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href={`mailto:${profile.email}`}>Email 보내기</ButtonLink>
+          <ButtonLink href={`mailto:${profile.email}`}>
+            <FiMail size={16} aria-hidden="true" />
+            Email 보내기
+          </ButtonLink>
           <ButtonLink href={profile.resume} variant="secondary">
+            <FiFileText size={16} aria-hidden="true" />
             Resume 보기
           </ButtonLink>
         </div>
         <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3">
-          <ExternalLink href={profile.github}>GitHub</ExternalLink>
-          <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
-          <ExternalLink href={profile.velog}>Velog</ExternalLink>
+          <ExternalLink href={profile.github}>
+            <FaGithub size={16} aria-hidden="true" />
+            GitHub
+          </ExternalLink>
+          <ExternalLink href={profile.linkedin}>
+            <FaLinkedin size={16} aria-hidden="true" />
+            LinkedIn
+          </ExternalLink>
+          <ExternalLink href={profile.velog}>
+            <SiVelog size={16} aria-hidden="true" />
+            Velog
+          </ExternalLink>
         </div>
       </div>
     </Section>

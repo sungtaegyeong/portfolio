@@ -12,7 +12,7 @@ export function ButtonLink({
   ...props
 }: ButtonLinkProps) {
   const base =
-    "inline-flex h-12 items-center justify-center rounded-2xl px-5 text-sm font-semibold transition-all duration-200";
+    "inline-flex h-12 items-center justify-center gap-2 rounded-2xl px-5 text-sm font-semibold transition-all duration-200";
   const variants = {
     primary:
       "bg-(--accent) text-white shadow-[0_10px_24px_rgba(49,130,246,0.24)] hover:-translate-y-0.5 hover:bg-(--accent-hover) hover:shadow-[0_14px_30px_rgba(49,130,246,0.28)]",

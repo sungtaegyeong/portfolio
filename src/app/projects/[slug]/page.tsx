@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { FaGithub } from "react-icons/fa6";
+import { FiArrowLeft, FiArrowRight, FiExternalLink } from "react-icons/fi";
 
 import { Header } from "@/components/sections/Header";
 import { allProjects, getProjectBySlug } from "@/data/projects";
@@ -99,9 +101,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       <article className="mx-auto w-full max-w-6xl px-5 pt-10 pb-24 sm:px-8">
         <Link
           href="/#projects"
-          className="inline-flex text-sm font-bold text-(--muted) transition-colors hover:text-(--accent)"
+          className="inline-flex items-center gap-1.5 text-sm font-bold text-(--muted) transition-colors hover:text-(--accent)"
         >
-          ← Projects
+          <FiArrowLeft size={16} aria-hidden="true" />
+          Projects
         </Link>
 
         <section className="grid gap-10 pt-10 lg:grid-cols-[1fr_0.92fr] lg:items-end">
@@ -121,8 +124,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-12 items-center justify-center rounded-2xl bg-(--accent) px-5 text-sm font-bold text-white shadow-[0_10px_24px_rgba(49,130,246,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--accent-hover)"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-(--accent) px-5 text-sm font-bold text-white shadow-[0_10px_24px_rgba(49,130,246,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--accent-hover)"
                 >
+                  <FiExternalLink size={16} aria-hidden="true" />
                   Live 보기
                 </a>
               )}
@@ -131,8 +135,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-12 items-center justify-center rounded-2xl border border-(--border) bg-white px-5 text-sm font-bold text-(--foreground) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--surface)"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl border border-(--border) bg-white px-5 text-sm font-bold text-(--foreground) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--surface)"
                 >
+                  <FaGithub size={16} aria-hidden="true" />
                   GitHub 보기
                 </a>
               )}
@@ -271,9 +276,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <div className="mt-7 border-t border-[#d7e8ff] pt-6">
                 <Link
                   href="/#projects"
-                  className="text-sm font-bold text-(--accent) transition-colors hover:text-(--accent-hover)"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-(--accent) transition-colors hover:text-(--accent-hover)"
                 >
                   다른 프로젝트 보기
+                  <FiArrowRight size={16} aria-hidden="true" />
                 </Link>
               </div>
             </div>

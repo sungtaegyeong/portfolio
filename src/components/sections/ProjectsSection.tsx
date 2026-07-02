@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa6";
+import { FiArrowRight, FiExternalLink } from "react-icons/fi";
 
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { Section } from "@/components/ui/Section";
@@ -50,12 +52,23 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="mt-auto flex flex-wrap gap-4 pt-6">
           <Link
             href={`/projects/${project.slug}`}
-            className="text-sm font-bold text-(--accent) transition-colors hover:text-(--accent-hover)"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-(--accent) transition-colors hover:text-(--accent-hover)"
           >
             자세히 보기
+            <FiArrowRight size={16} aria-hidden="true" />
           </Link>
-          {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
-          {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
+          {project.liveUrl && (
+            <ExternalLink href={project.liveUrl}>
+              <FiExternalLink size={16} aria-hidden="true" />
+              Live
+            </ExternalLink>
+          )}
+          {project.githubUrl && (
+            <ExternalLink href={project.githubUrl}>
+              <FaGithub size={16} aria-hidden="true" />
+              GitHub
+            </ExternalLink>
+          )}
         </div>
       </div>
     </article>
@@ -93,12 +106,23 @@ export function ProjectsSection() {
                 <div className="flex shrink-0 gap-4">
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="text-sm font-bold text-(--accent) transition-colors hover:text-(--accent-hover)"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-(--accent) transition-colors hover:text-(--accent-hover)"
                   >
                     자세히 보기
+                    <FiArrowRight size={16} aria-hidden="true" />
                   </Link>
-                  {project.liveUrl && <ExternalLink href={project.liveUrl}>Live</ExternalLink>}
-                  {project.githubUrl && <ExternalLink href={project.githubUrl}>GitHub</ExternalLink>}
+                  {project.liveUrl && (
+                    <ExternalLink href={project.liveUrl}>
+                      <FiExternalLink size={16} aria-hidden="true" />
+                      Live
+                    </ExternalLink>
+                  )}
+                  {project.githubUrl && (
+                    <ExternalLink href={project.githubUrl}>
+                      <FaGithub size={16} aria-hidden="true" />
+                      GitHub
+                    </ExternalLink>
+                  )}
                 </div>
               </article>
             ))}
