@@ -50,6 +50,7 @@ export const featuredProjects: Project[] = [
     ],
     techStack: ["Next.js", "TypeScript", "Panda CSS", "TanStack Query"],
     liveUrl: "https://checktask.kr",
+    githubUrl: "https://github.com/check-task/frontend",
     detail: {
       intro: [
         "CHECKTASK는 대학생이 개인 과제와 팀 과제를 한곳에서 관리할 수 있도록 만든 과제 관리 플랫폼입니다.",
