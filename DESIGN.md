@@ -167,8 +167,8 @@ Contact links:
 
 - Email: `tjdxoruddl@gmail.com`
 - GitHub: `https://github.com/sungtaegyeong`
-- LinkedIn: `https://www.linkedin.com/in/%ED%83%9C%EA%B2%BD-%EC%84%B1-365b213a6/`
-- Velog: `https://velog.io/@taegyeong0320/`
+- LinkedIn: `https://www.linkedin.com/in/sungtaegyeong`
+- Velog: `https://velog.io/@taegyeong0320`
 - Resume: planned as `public/resume.pdf`
 
 Resume should be placed in `public/resume.pdf` during implementation so the site can link to `/resume.pdf`.
