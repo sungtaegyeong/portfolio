@@ -5,6 +5,8 @@ export const THEME_COLORS = { light: "#ffffff", dark: "#17191c" } as const;
 
 type ReadableStorage = Pick<Storage, "getItem">;
 
+let themeChangeSequence = 0;
+
 export function isTheme(value: unknown): value is Theme {
   return value === "light" || value === "dark";
 }
@@ -24,6 +26,8 @@ export function readStoredTheme(storage: ReadableStorage): Theme | null {
 
 export function applyTheme(theme: Theme, targetDocument: Document): void {
   const root = targetDocument.documentElement;
+  const themeChangeId = String(++themeChangeSequence);
+  root.dataset.themeChanging = themeChangeId;
   root.dataset.theme = theme;
   root.style.colorScheme = theme;
 
@@ -32,6 +36,30 @@ export function applyTheme(theme: Theme, targetDocument: Document): void {
   )) {
     const belongsToTheme = meta.content.toLowerCase() === THEME_COLORS[theme];
     meta.media = belongsToTheme ? "all" : "not all";
+  }
+
+  const clearThemeChanging = () => {
+    if (root.dataset.themeChanging === themeChangeId) {
+      delete root.dataset.themeChanging;
+    }
+  };
+  const view = targetDocument.defaultView;
+
+  if (!view || typeof view.requestAnimationFrame !== "function") {
+    clearThemeChanging();
+    return;
+  }
+
+  try {
+    view.requestAnimationFrame(() => {
+      try {
+        view.requestAnimationFrame(clearThemeChanging);
+      } catch {
+        clearThemeChanging();
+      }
+    });
+  } catch {
+    clearThemeChanging();
   }
 }
 
