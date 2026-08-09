@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
+
 const navItems = [
   { label: "Projects", href: "/#projects" },
   { label: "Skills", href: "/#skills" },
@@ -34,12 +36,15 @@ export function Header() {
           ))}
         </div>
 
-        <Link
-          href="/#contact"
-          className="inline-flex h-10 items-center justify-center rounded-2xl bg-(--accent) px-4 text-sm font-bold text-white transition-colors hover:bg-(--accent-hover)"
-        >
-          Contact
-        </Link>
+        <div className="flex items-center">
+          <ThemeToggle />
+          <Link
+            href="/#contact"
+            className="inline-flex h-10 items-center justify-center rounded-2xl bg-(--accent) px-4 text-sm font-bold text-white transition-colors hover:bg-(--accent-hover) md:hidden"
+          >
+            Contact
+          </Link>
+        </div>
       </nav>
     </header>
   );
