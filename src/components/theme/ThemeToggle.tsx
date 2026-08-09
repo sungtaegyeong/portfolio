@@ -12,11 +12,14 @@ import {
   type Theme,
 } from "@/theme/theme";
 
+type ThemeSource = "system" | "user";
+
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("light");
   const explicitThemeRef = useRef<Theme | null>(null);
-  const setDocumentTheme = (nextTheme: Theme) => {
+  const setDocumentTheme = (nextTheme: Theme, source: ThemeSource) => {
     applyTheme(nextTheme, document);
+    document.documentElement.dataset.themeSource = source;
     setTheme(nextTheme);
   };
 
@@ -28,13 +31,17 @@ export function ThemeToggle() {
     try {
       storedTheme = readStoredTheme(window.localStorage);
     } catch {}
-    const bootstrapTheme = document.documentElement.dataset.theme;
-    const resolvedTheme = isTheme(bootstrapTheme)
-      ? bootstrapTheme
-      : resolveTheme(storedTheme, mediaQuery.matches);
+    const root = document.documentElement;
+    const rootTheme = root.dataset.theme;
+    const rootSource = root.dataset.themeSource;
+    const rootUserTheme = rootSource === "user" && isTheme(rootTheme) ? rootTheme : null;
+    const explicitTheme = rootUserTheme ?? (rootSource === undefined ? storedTheme : null);
+    const resolvedTheme = resolveTheme(explicitTheme, mediaQuery.matches);
+    const resolvedSource: ThemeSource = explicitTheme === null ? "system" : "user";
 
-    explicitThemeRef.current = storedTheme;
+    explicitThemeRef.current = explicitTheme;
     applyTheme(resolvedTheme, document);
+    root.dataset.themeSource = resolvedSource;
     queueMicrotask(() => {
       if (isCurrent) {
         setTheme(resolvedTheme);
@@ -46,7 +53,7 @@ export function ThemeToggle() {
       }
 
       const nextTheme: Theme = event.matches ? "dark" : "light";
-      setDocumentTheme(nextTheme);
+      setDocumentTheme(nextTheme, "system");
     };
 
     mediaQuery.addEventListener("change", followSystemTheme);
@@ -61,7 +68,7 @@ export function ThemeToggle() {
     const nextTheme: Theme = theme === "dark" ? "light" : "dark";
 
     explicitThemeRef.current = nextTheme;
-    setDocumentTheme(nextTheme);
+    setDocumentTheme(nextTheme, "user");
 
     try {
       window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);

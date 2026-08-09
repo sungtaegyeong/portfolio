@@ -52,6 +52,7 @@ export const THEME_BOOTSTRAP_SCRIPT = String.raw`
   const root = document.documentElement;
 
   root.dataset.theme = theme;
+  root.dataset.themeSource = stored === null ? "system" : "user";
   root.style.colorScheme = theme;
 
   for (const meta of document.querySelectorAll('meta[name="theme-color"]')) {
