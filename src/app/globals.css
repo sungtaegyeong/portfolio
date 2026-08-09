@@ -121,18 +121,3 @@ body {
   outline: 3px solid color-mix(in srgb, var(--accent) 32%, transparent);
   outline-offset: 3px;
 }
-
-:root[data-theme-ready="true"] *,
-:root[data-theme-ready="true"] *::before,
-:root[data-theme-ready="true"] *::after {
-  transition-property: color, background-color, border-color, fill, stroke;
-  transition-duration: 180ms;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root[data-theme-ready="true"] *,
-  :root[data-theme-ready="true"] *::before,
-  :root[data-theme-ready="true"] *::after {
-    transition-duration: 0s;
-  }
-}

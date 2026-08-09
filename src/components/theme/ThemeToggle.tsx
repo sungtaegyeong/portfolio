@@ -40,8 +40,6 @@ export function ThemeToggle() {
         setTheme(resolvedTheme);
       }
     });
-    document.documentElement.dataset.themeReady = "true";
-
     const followSystemTheme = (event: MediaQueryListEvent) => {
       if (explicitThemeRef.current !== null) {
         return;
@@ -80,16 +78,16 @@ export function ThemeToggle() {
       title={label}
       onClick={toggleTheme}
     >
-      <span className="relative inline-flex size-10 items-center justify-center rounded-[14px] border border-(--border) bg-(--surface-strong) text-(--foreground) transition-colors duration-200 motion-reduce:transition-none">
+      <span className="relative inline-flex size-10 items-center justify-center rounded-[14px] border border-(--border) bg-(--surface-strong) text-(--foreground)">
         <span
-          className={`absolute inset-0 inline-flex items-center justify-center transition-opacity duration-200 motion-reduce:transition-none ${
+          className={`absolute inset-0 inline-flex items-center justify-center ${
             theme === "dark" ? "opacity-0" : "opacity-100"
           }`}
         >
           <FiMoon size={18} aria-hidden="true" />
         </span>
         <span
-          className={`absolute inset-0 inline-flex items-center justify-center transition-opacity duration-200 motion-reduce:transition-none ${
+          className={`absolute inset-0 inline-flex items-center justify-center ${
             theme === "dark" ? "opacity-100" : "opacity-0"
           }`}
         >
