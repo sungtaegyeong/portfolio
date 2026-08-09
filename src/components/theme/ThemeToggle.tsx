@@ -73,7 +73,7 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      className="hidden size-11 items-center justify-center rounded-2xl md:inline-flex"
+      className="hidden size-11 cursor-pointer items-center justify-center rounded-2xl md:inline-flex"
       aria-label={label}
       title={label}
       onClick={toggleTheme}
