@@ -1,4 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+
+import { THEME_BOOTSTRAP_SCRIPT, THEME_COLORS } from "@/theme/theme";
+
 import "./globals.css";
 
 const siteUrl =
@@ -34,13 +38,23 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: THEME_COLORS.light },
+    { media: "(prefers-color-scheme: dark)", color: THEME_COLORS.dark },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
+      <Script id="theme-bootstrap" strategy="beforeInteractive">
+        {THEME_BOOTSTRAP_SCRIPT}
+      </Script>
       <body>{children}</body>
     </html>
   );
