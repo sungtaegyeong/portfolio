@@ -52,12 +52,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body>
+      <head>
         <Script id="theme-bootstrap" strategy="beforeInteractive">
           {THEME_BOOTSTRAP_SCRIPT}
         </Script>
-        {children}
-      </body>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
