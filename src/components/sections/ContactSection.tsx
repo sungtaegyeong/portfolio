@@ -1,40 +1,35 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { FiFileText, FiMail } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 import { SiVelog } from "react-icons/si";
 
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { Section } from "@/components/ui/Section";
 import { profile } from "@/data/profile";
 
+const contactLinkClassName = "min-h-11 py-2";
+
 export function ContactSection() {
   return (
-    <Section id="contact" eyebrow="Contact" title="프로젝트와 이력서를 함께 확인해 주세요">
+    <Section id="contact" eyebrow="Contact" title="함께 만들 기회를 기다리고 있습니다">
       <div className="rounded-[32px] border border-[#d7e8ff] bg-[#f5faff] p-7 sm:p-10">
         <p className="text-lg leading-8 text-(--muted)">
-          포트폴리오, GitHub, Velog, 이력서를 통해 작업 방식과 프로젝트를 확인할 수 있습니다.
-          연락은 이메일로 부탁드립니다.
+          프로젝트와 작업 방식은 GitHub와 Velog에서 더 자세히 확인할 수 있습니다. 협업이나 채용
+          관련 연락은 이메일로 부탁드립니다.
         </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href={`mailto:${profile.email}`}>
+        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-1 sm:flex sm:flex-wrap sm:items-center">
+          <ExternalLink href={`mailto:${profile.email}`} className={contactLinkClassName}>
             <FiMail size={16} aria-hidden="true" />
-            Email 보내기
-          </ButtonLink>
-          <ButtonLink href={profile.resume} variant="secondary">
-            <FiFileText size={16} aria-hidden="true" />
-            Resume 보기
-          </ButtonLink>
-        </div>
-        <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3">
-          <ExternalLink href={profile.github}>
+            Email
+          </ExternalLink>
+          <ExternalLink href={profile.github} className={contactLinkClassName}>
             <FaGithub size={16} aria-hidden="true" />
             GitHub
           </ExternalLink>
-          <ExternalLink href={profile.linkedin}>
+          <ExternalLink href={profile.linkedin} className={contactLinkClassName}>
             <FaLinkedin size={16} aria-hidden="true" />
             LinkedIn
           </ExternalLink>
-          <ExternalLink href={profile.velog}>
+          <ExternalLink href={profile.velog} className={contactLinkClassName}>
             <SiVelog size={16} aria-hidden="true" />
             Velog
           </ExternalLink>

@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { FiArrowRight, FiFileText, FiMail } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import { SiVelog } from "react-icons/si";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -26,10 +26,6 @@ export function HeroSection() {
           Projects 보기
           <FiArrowRight size={16} aria-hidden="true" />
         </ButtonLink>
-        <ButtonLink href={profile.resume} variant="secondary">
-          <FiFileText size={16} aria-hidden="true" />
-          Resume 보기
-        </ButtonLink>
       </div>
       <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3">
         <ExternalLink href={profile.github}>
@@ -43,10 +39,6 @@ export function HeroSection() {
         <ExternalLink href={profile.velog}>
           <SiVelog size={16} aria-hidden="true" />
           Velog
-        </ExternalLink>
-        <ExternalLink href={`mailto:${profile.email}`}>
-          <FiMail size={16} aria-hidden="true" />
-          Email
         </ExternalLink>
       </div>
     </section>

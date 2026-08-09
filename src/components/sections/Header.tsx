@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { profile } from "@/data/profile";
-
 const navItems = [
   { label: "Projects", href: "/#projects" },
   { label: "Skills", href: "/#skills" },
@@ -36,12 +34,12 @@ export function Header() {
           ))}
         </div>
 
-        <a
-          href={profile.resume}
+        <Link
+          href="/#contact"
           className="inline-flex h-10 items-center justify-center rounded-2xl bg-(--accent) px-4 text-sm font-bold text-white transition-colors hover:bg-(--accent-hover)"
         >
-          Resume
-        </a>
+          Contact
+        </Link>
       </nav>
     </header>
   );

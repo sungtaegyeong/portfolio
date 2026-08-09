@@ -9,5 +9,4 @@ export const profile = {
   github: "https://github.com/sungtaegyeong",
   linkedin: "https://www.linkedin.com/in/sungtaegyeong",
   velog: "https://velog.io/@taegyeong0320",
-  resume: "/resume.pdf",
 } as const;

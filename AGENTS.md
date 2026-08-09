@@ -27,7 +27,7 @@ Validation before completion:
 
 - A recruiter can understand identity, role direction, and core strength within 10 seconds.
 - Featured projects are visible and scannable without digging.
-- Resume, GitHub, Velog, and email are easy to find.
+- GitHub, LinkedIn, Velog, and email are easy to find.
 - The site works on mobile and desktop.
 - `pnpm lint` passes.
 - `pnpm build` passes after removing or replacing remote Google Font usage.

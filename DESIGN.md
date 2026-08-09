@@ -13,8 +13,8 @@ Examples:
 - Featured Projects
 - Skills
 - Contact
-- Resume
 - GitHub
+- LinkedIn
 - Velog
 
 Body copy should be Korean and direct.
@@ -69,8 +69,8 @@ Use a quiet sticky header for one-page navigation. It should improve scanning wi
 
 - Left: `Sung Taegyeong`
 - Desktop nav: Projects, Skills, Experience, Contact
-- Persistent CTA: Resume
-- Mobile: keep navigation minimal and always expose Resume
+- Persistent CTA: Contact
+- Mobile: keep navigation minimal and always expose Contact
 - Visual style: white translucent background, subtle border, no heavy shadow
 
 ## Hero
@@ -94,13 +94,12 @@ Supporting copy should position Sung Taegyeong as a frontend developer who cares
 Primary CTAs:
 
 - Projects 보기
-- Resume 보기
 
 Secondary links:
 
 - GitHub
+- LinkedIn
 - Velog
-- Email
 
 ## Featured Projects
 
@@ -169,9 +168,10 @@ Contact links:
 - GitHub: `https://github.com/sungtaegyeong`
 - LinkedIn: `https://www.linkedin.com/in/sungtaegyeong`
 - Velog: `https://velog.io/@taegyeong0320`
-- Resume: planned as `public/resume.pdf`
 
-Resume should be placed in `public/resume.pdf` during implementation so the site can link to `/resume.pdf`.
+Present Email, GitHub, LinkedIn, and Velog as one consistent icon-and-text link group, with Email first. Use a balanced two-column layout on mobile and one row on wider screens. Keep mobile link targets at least 44px high without using a filled email button.
+
+Keep the public portfolio focused on projects and professional links. Do not publish a resume file containing personal information; share application-specific resumes privately.
 
 ## Content Rules
 
