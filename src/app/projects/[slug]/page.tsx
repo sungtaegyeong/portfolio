@@ -124,7 +124,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-(--accent) px-5 text-sm font-bold text-(--on-accent) shadow-[0_10px_24px_color-mix(in_srgb,var(--accent)_22%,transparent)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--accent-hover)"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-(--action) px-5 text-sm font-bold text-(--on-accent) shadow-[0_10px_24px_color-mix(in_srgb,var(--action)_22%,transparent)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--action-hover)"
                 >
                   <FiExternalLink size={16} aria-hidden="true" />
                   Live 보기
