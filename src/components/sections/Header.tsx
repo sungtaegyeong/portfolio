@@ -11,7 +11,7 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-(--border)/70 bg-white/82 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-(--border)/70 bg-(--header) backdrop-blur-xl">
       <nav
         aria-label="Primary navigation"
         className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8"
@@ -40,7 +40,7 @@ export function Header() {
           <ThemeToggle />
           <Link
             href="/#contact"
-            className="inline-flex h-10 items-center justify-center rounded-2xl bg-(--accent) px-4 text-sm font-bold text-white transition-colors hover:bg-(--accent-hover) md:hidden"
+            className="inline-flex h-10 items-center justify-center rounded-2xl bg-(--accent) px-4 text-sm font-bold text-(--on-accent) transition-colors hover:bg-(--accent-hover) md:hidden"
           >
             Contact
           </Link>

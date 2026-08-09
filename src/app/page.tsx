@@ -7,7 +7,7 @@ import { SkillsSection } from "@/components/sections/SkillsSection";
 
 export default function Home() {
   return (
-    <main className="bg-[linear-gradient(180deg,#f7fbff_0%,#ffffff_34%,#ffffff_100%)]">
+    <main className="bg-[linear-gradient(180deg,var(--page-start)_0%,var(--background)_34%,var(--background)_100%)]">
       <Header />
       <HeroSection />
       <ProjectsSection />

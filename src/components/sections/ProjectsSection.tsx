@@ -9,7 +9,7 @@ import { featuredProjects, otherProjects, type Project } from "@/data/projects";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-transparent bg-white shadow-[0_16px_48px_rgba(25,31,40,0.06)] transition-all duration-200 hover:-translate-y-1 hover:border-[#d8dee5] hover:shadow-[0_18px_54px_rgba(25,31,40,0.09)]">
+    <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-transparent bg-(--card) shadow-[0_16px_48px_color-mix(in_srgb,var(--shadow)_6%,transparent)] transition-all duration-200 hover:-translate-y-1 hover:border-(--border) hover:shadow-[0_18px_54px_color-mix(in_srgb,var(--shadow-strong)_9%,transparent)]">
       <div className="relative aspect-1200/630 overflow-hidden bg-(--surface)">
         <Image
           src={project.image.src}

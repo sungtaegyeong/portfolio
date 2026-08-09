@@ -22,7 +22,7 @@ export function ExperienceSection() {
             >
               <span
                 aria-hidden="true"
-                className="absolute top-2 left-0 size-5 rounded-full border-4 border-white bg-(--accent) shadow-[0_0_0_1px_rgba(49,130,246,0.18)] sm:size-6"
+                className="absolute top-2 left-0 size-5 rounded-full border-4 border-(--background) bg-(--accent) shadow-[0_0_0_1px_color-mix(in_srgb,var(--accent)_18%,transparent)] sm:size-6"
               />
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>

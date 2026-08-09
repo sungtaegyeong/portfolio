@@ -13,7 +13,7 @@ export function SkillsSection() {
         {skillGroups.map((group) => (
           <article
             key={group.title}
-            className="rounded-[28px] border border-(--border) bg-white p-6 shadow-[0_12px_36px_rgba(25,31,40,0.04)]"
+            className="rounded-[28px] border border-(--border) bg-(--card) p-6 shadow-[0_12px_36px_color-mix(in_srgb,var(--shadow)_4%,transparent)]"
           >
             <h3 className="text-xl font-bold text-(--foreground)">{group.title}</h3>
             <div className="mt-4 flex flex-wrap gap-2">

@@ -9,7 +9,7 @@ import { profile } from "@/data/profile";
 export function HeroSection() {
   return (
     <section className="mx-auto flex min-h-[78vh] w-full max-w-6xl flex-col justify-center px-5 py-20 sm:px-8">
-      <p className="mb-6 inline-flex w-fit rounded-full bg-white px-4 py-2 text-sm font-bold text-(--accent) shadow-[0_8px_24px_rgba(25,31,40,0.06)]">
+      <p className="mb-6 inline-flex w-fit rounded-full bg-(--card) px-4 py-2 text-sm font-bold text-(--accent) shadow-[0_8px_24px_color-mix(in_srgb,var(--shadow)_6%,transparent)]">
         Frontend Portfolio
       </p>
       <h1 className="text-5xl leading-[1.08] font-bold tracking-normal text-(--foreground) sm:text-7xl">
