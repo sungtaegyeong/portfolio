@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 
 import { THEME_BOOTSTRAP_SCRIPT, THEME_COLORS } from "@/theme/theme";
 
@@ -53,9 +52,10 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
-        <Script id="theme-bootstrap" strategy="beforeInteractive">
-          {THEME_BOOTSTRAP_SCRIPT}
-        </Script>
+        <script
+          id="theme-bootstrap"
+          dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP_SCRIPT }}
+        />
       </head>
       <body>{children}</body>
     </html>
