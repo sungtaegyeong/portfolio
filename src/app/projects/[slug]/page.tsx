@@ -96,7 +96,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   ];
 
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,#f7fbff_0%,#ffffff_30%,#ffffff_100%)]">
+    <main className="min-h-screen bg-[linear-gradient(180deg,var(--page-start)_0%,var(--background)_30%,var(--background)_100%)]">
       <Header />
       <article className="mx-auto w-full max-w-6xl px-5 pt-10 pb-24 sm:px-8">
         <Link
@@ -124,7 +124,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-(--accent) px-5 text-sm font-bold text-white shadow-[0_10px_24px_rgba(49,130,246,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--accent-hover)"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-(--accent) px-5 text-sm font-bold text-(--on-accent) shadow-[0_10px_24px_color-mix(in_srgb,var(--accent)_22%,transparent)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--accent-hover)"
                 >
                   <FiExternalLink size={16} aria-hidden="true" />
                   Live 보기
@@ -135,7 +135,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl border border-(--border) bg-white px-5 text-sm font-bold text-(--foreground) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--surface)"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl border border-(--border) bg-(--card) px-5 text-sm font-bold text-(--foreground) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--surface)"
                 >
                   <FaGithub size={16} aria-hidden="true" />
                   GitHub 보기
@@ -144,7 +144,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
-          <div className="relative aspect-1200/630 overflow-hidden rounded-[32px] border border-[#dce6f1] bg-(--surface) shadow-[0_20px_60px_rgba(25,31,40,0.08)]">
+          <div className="relative aspect-1200/630 overflow-hidden rounded-[32px] border border-(--accent-border) bg-(--surface) shadow-[0_20px_60px_color-mix(in_srgb,var(--shadow-strong)_8%,transparent)]">
             <Image
               src={project.image.src}
               alt={project.image.alt}
@@ -171,7 +171,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 {project.detail.features.map((feature) => (
                   <article
                     key={feature.title}
-                    className="rounded-[28px] border border-(--border) bg-white p-5 shadow-[0_10px_30px_rgba(25,31,40,0.04)]"
+                    className="rounded-[28px] border border-(--border) bg-(--card) p-5 shadow-[0_10px_30px_color-mix(in_srgb,var(--shadow)_4%,transparent)]"
                   >
                     <h3 className="text-lg font-bold text-(--foreground)">
                       {feature.title}
@@ -189,7 +189,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 {project.detail.contributions.map((contribution) => (
                   <article
                     key={contribution.title}
-                    className="rounded-[28px] border border-(--border) bg-white p-5 shadow-[0_10px_30px_rgba(25,31,40,0.04)]"
+                    className="rounded-[28px] border border-(--border) bg-(--card) p-5 shadow-[0_10px_30px_color-mix(in_srgb,var(--shadow)_4%,transparent)]"
                   >
                     <h3 className="text-lg font-bold text-(--foreground)">
                       {contribution.title}
@@ -217,7 +217,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 {troubleshootingSteps.map((step) => (
                   <div
                     key={step.label}
-                    className="rounded-[28px] border border-(--border) bg-white p-5 shadow-[0_10px_30px_rgba(25,31,40,0.04)]"
+                    className="rounded-[28px] border border-(--border) bg-(--card) p-5 shadow-[0_10px_30px_color-mix(in_srgb,var(--shadow)_4%,transparent)]"
                   >
                     <div className="flex items-center gap-3">
                       <span className="inline-flex size-9 items-center justify-center rounded-full bg-(--accent-soft) text-sm font-bold text-(--accent)">
@@ -244,7 +244,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start">
-            <div className="rounded-[30px] border border-[#d7e8ff] bg-[#f5faff] p-6">
+            <div className="rounded-[30px] border border-(--accent-border) bg-(--accent-surface) p-6">
               <p className="text-sm font-bold text-(--accent)">Project Summary</p>
               <dl className="mt-5 space-y-5">
                 {project.detail.facts.map((fact) => (
@@ -259,13 +259,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 ))}
               </dl>
 
-              <div className="mt-7 border-t border-[#d7e8ff] pt-6">
+              <div className="mt-7 border-t border-(--accent-border) pt-6">
                 <p className="text-xs font-bold text-(--muted)">Tech Stack</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full bg-white px-3 py-1 text-xs font-bold text-(--accent)"
+                      className="rounded-full bg-(--card) px-3 py-1 text-xs font-bold text-(--accent)"
                     >
                       {tech}
                     </span>
@@ -273,7 +273,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 </div>
               </div>
 
-              <div className="mt-7 border-t border-[#d7e8ff] pt-6">
+              <div className="mt-7 border-t border-(--accent-border) pt-6">
                 <Link
                   href="/#projects"
                   className="inline-flex items-center gap-1.5 text-sm font-bold text-(--accent) transition-colors hover:text-(--accent-hover)"
